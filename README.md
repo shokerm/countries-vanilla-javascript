@@ -1,6 +1,7 @@
 # Countries Vanilla Javascript
 - Only Javascript code. <strong>No</strong> css file, <strong>No</strong>  Html Elements!
 - Display all countries, their names, capital cities, and flags.
+- With simple pagination.
 - Click on the flag will open the conutry's map on Google map.
 - [Demo](https://shokerm.github.io/countries-vanilla-javascript/)
 # Screenshots
