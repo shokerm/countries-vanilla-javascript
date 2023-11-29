@@ -10,6 +10,37 @@ var pageCount = 0;
 
 function buildHtml(countries, countriesLength) {
   pageCount++;
+
+  const htmlFile = document.getElementsByTagName("html")[0];
+  htmlFile.setAttribute("lang", "en");
+  // Head
+  const head = document.head;
+  //Metadata
+  const charset = document.createElement("meta");
+  charset.setAttribute("charset", "UTF-8");
+  head.appendChild(charset);
+
+  const meta = document.createElement("meta");
+  meta.setAttribute("name", "viewport");
+  meta.setAttribute("content", "width=device-width, initial-scale=1.0");
+  head.appendChild(meta);
+
+  // Metadata link favicon
+  const link = document.createElement("link");
+  link.setAttribute("rel", "shortcut icon");
+  link.setAttribute("rel", "shortcut icon");
+  link.setAttribute(
+    "href",
+    "https://cdn-icons-png.flaticon.com/512/4830/4830734.png"
+  );
+  link.setAttribute("type", "image/x-icon");
+  head.appendChild(link);
+
+  // Title
+  const title = document.createElement("title");
+  title.innerText = "Countries";
+  head.appendChild(title);
+
   //Body
   const body = document.getElementsByTagName("body");
   Object.assign(body[0].style, {
@@ -18,6 +49,7 @@ function buildHtml(countries, countriesLength) {
     fontFamily: "Calibri",
     textAlign: "center",
   });
+
   const pageElement = document.createElement("p");
   const pageText = document.createTextNode(
     "Page: " + pageCount + "/" + Math.round(countries.length / 20)
